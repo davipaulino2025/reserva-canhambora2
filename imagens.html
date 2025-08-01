@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Imagens</title>
+  <link rel="shortcut icon" href="https://roma360tour.com/wp-content/uploads/2025/03/LOGO-500-X-500-FUNDO-TRANS-150x150.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('https://images.tcdn.com.br/img/img_prod/910014/revestimento_travertino_rockface_10x30cm_1m_10567_1_e0d3657ba10e28fcef494c60554f4bf3.jpg');
+      background-repeat: repeat;
+      background-position: top left;
+    }
+
+    .texto-bounce {
+      padding: 40px 20px 20px;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .texto-bounce span {
+      display: inline-block;
+      animation: bounce 1.5s ease-in-out infinite;
+    }
+
+    .texto-bounce span:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+
+    .texto-bounce span:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .imagem-container {
+      background-color: rgba(146, 104, 12, 0.61);
+      padding: 30px 10px;
+      border-radius: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .imagem-container img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .imagem-container img:hover {
+      transform: scale(1.15);
+      filter: brightness(1.05) contrast(1.2) saturate(1.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .whatsapp-buttons {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 10000;
+    }
+
+    .whatsapp-button {
+      display: flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0,128,0,0.3);
+      animation: pulse 2s infinite;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 6px #25D366;
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 14px #25D366;
+      }
+    }
+
+    .instagram-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      z-index: 10000;
+    }
+
+    .instagram-float img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    footer {
+      background-color: #3f2e1e;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+
+    footer .social {
+      margin-top: 10px;
+    }
+
+    footer .social a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    footer .social a:hover {
+      color: #d6b26e;
+    }
+
+    @media (max-width: 600px) {
+      .texto-bounce {
+        font-size: 1.2rem;
+        padding: 20px 10px;
+      }
+
+      .imagem-container img {
+        height: 180px;
+      }
+
+      .whatsapp-button {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+
+      .whatsapp-button img {
+        width: 20px;
+        height: 20px;
+      }
+
+      footer {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <p class="texto-bounce">
+  <span>M</span><span>o</span><span>m</span><span>e</span><span>n</span><span>t</span><span>o</span><span>s</span> 
+  <span>i</span><span>n</span><span>e</span><span>s</span><span>q</span><span>u</span><span>e</span><span>c</span><span>í</span><span>v</span><span>e</span><span>i</span><span>s</span> 
+  <span>e</span><span>m</span> 
+  <span>i</span><span>m</span><span>a</span><span>g</span><span>e</span><span>n</span><span>s</span> 
+  
+  <span>e</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>e</span> 
+  <span>n</span><span>o</span><span>s</span><span>s</span><span>a</span><span>s</span> 
+  <span>h</span><span>i</span><span>s</span><span>t</span><span>ó</span><span>r</span><span>i</span><span>a</span><span>s</span> 
+  <span>e</span> 
+  <span>v</span><span>i</span><span>v</span><span>a</span> 
+  <span>a</span> 
+  <span>e</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>ê</span><span>n</span><span>c</span><span>i</span><span>a</span><span>!</span><span>!</span><span>!</span>
+</p>
+
+  <div class="imagem-container">
+    <!-- Substitua os caminhos abaixo pelas URLs corretas ou links válidos das imagens -->
+    <img src="imagem 1.jpeg" alt="Imagem 1">
+    <img src="imagem 2.jpeg" alt="Imagem 2">
+    <img src="imagem 3.jpeg" alt="Imagem 3">
+    <img src="imagem 4.jpeg" alt="Imagem 4">
+    <img src="imagem 5.jpeg" alt="Imagem 5">
+    <img src="imagem 6.jpeg" alt="Imagem 6">
+    <img src="imagem 7.jpeg" alt="Imagem 7">
+    <img src="imagem 9.jpeg" alt="Imagem 9">
+    <img src="imagem 10.jpeg" alt="Imagem 10">
+    <img src="imagem 11.jpeg" alt="Imagem 11">
+    <img src="imagem 12.jpeg" alt="Imagem 12">
+    <img src="imagem 13.jpeg" alt="Imagem 13">
+    <img src="imagem 14.jpeg" alt="Imagem 14">
+    <img src="imagem 15.jpeg" alt="Imagem 15">
+    <img src="imagem 16.jpeg" alt="Imagem 16">
+    <img src="imagem 17.jpeg" alt="Imagem 17">
+    <img src="imagem 18.jpeg" alt="Imagem 18">
+    <img src="imagem 19.jpeg" alt="Imagem 19">
+    <img src="imagem 20.jpeg" alt="Imagem 20">
+    <img src="imagem 21.jpeg" alt="Imagem 21">
+    <img src="imagem 23.jpeg" alt="Imagem 23">
+    <img src="imagem 24.jpeg" alt="Imagem 24">
+    <img src="imagem 25.jpeg" alt="Imagem 25">
+    <img src="imagem 26.jpeg" alt="Imagem 26">
+    <img src="imagem 27.jpeg" alt="Imagem 27">
+    <img src="imagem 28.jpeg" alt="Imagem 28">
+    <img src="imagem 29.jpeg" alt="Imagem 29">
+    <img src="imagem 30.jpeg" alt="Imagem 30">
+    <img src="imagem 31.jpeg" alt="Imagem 31">
+    <img src="imagem 32.jpeg" alt="Imagem 32">
+    <img src="imagem 33.jpeg" alt="Imagem 33">
+    <img src="imagem 34.jpeg" alt="Imagem 34">
+    <img src="imagem 35.jpeg" alt="Imagem 35">
+    <img src="imagem 36.jpeg" alt="Imagem 36">
+    <img src="imagem 38.jpeg" alt="Imagem 38">
+    <img src="imagem 39.jpeg" alt="Imagem 39">
+    <img src="imagem 40.jpeg" alt="Imagem 40">
+    <img src="imagem 41.jpeg" alt="Imagem 41">
+    <img src="imagem 42.jpeg" alt="Imagem 42">
+    <img src="imagem 43.jpeg" alt="Imagem 43">
+    <img src="imagem 44.jpeg" alt="Imagem 44">
+    <img src="imagem 45.jpeg" alt="Imagem 45">
+    <img src="imagem 47.jpeg" alt="Imagem 47">
+    <img src="imagem 48.jpeg" alt="Imagem 48">
+    <img src="imagem 49.jpeg" alt="Imagem 49">
+    <img src="imagem 50.jpeg" alt="Imagem 50">
+    <img src="imagem 51.jpeg" alt="Imagem 51">
+    <img src="imagem 52.jpeg" alt="Imagem 52">
+    <img src="imagem 53.jpeg" alt="Imagem 53">
+    <img src="imagem 54.jpeg" alt="Imagem 54">
+    <img src="imagem 55.jpeg" alt="Imagem 55">
+    <img src="imagem 56.jpeg" alt="Imagem 56">
+    <img src="imagem 57.jpeg" alt="Imagem 57">
+    <img src="imagem 58.jpeg" alt="Imagem 58">
+    <img src="imagem 59.jpeg" alt="Imagem 59">
+    <img src="imagem 60.jpeg" alt="Imagem 60">
+    <img src="imagem 61.jpeg" alt="Imagem 61">
+    <img src="imagem 62.jpeg" alt="Imagem 62">
+    <img src="imagem 63.jpeg" alt="Imagem 63">
+    <img src="imagem 64.jpeg" alt="Imagem 64">
+    <img src="imagem 65.jpeg" alt="Imagem 65">
+    <img src="imagem 66.jpeg" alt="Imagem 66">
+    <img src="imagem 67.jpeg" alt="Imagem 67">
+    <img src="imagem 68.jpeg" alt="Imagem 68">
+    <img src="imagem 69.jpeg" alt="Imagem 69">
+    <img src="imagem 70.jpeg" alt="Imagem 70">
+    <img src="imagem 71.jpeg" alt="Imagem 71">
+    <img src="imagem 72.jpeg" alt="Imagem 72">
+    <img src="imagem 73.jpeg" alt="Imagem 73">
+    <img src="imagem 74.jpeg" alt="Imagem 74">
+    <img src="imagem 75.jpeg" alt="Imagem 75">
+    <img src="imagem 76.jpeg" alt="Imagem 76">
+    <img src="imagem 77.jpeg" alt="Imagem 77">
+    <img src="imagem 78.jpeg" alt="Imagem 78">
+    <img src="imagem 79.jpeg" alt="Imagem 79">
+    <img src="imagem 80.jpeg" alt="Imagem 80">
+    <img src="imagem 81.jpeg" alt="Imagem 81">
+    <img src="imagem 82.jpeg" alt="Imagem 82">
+    <img src="imagem 83.jpeg" alt="Imagem 83">
+    <img src="imagem 84.jpeg" alt="Imagem 84">
+    <img src="imagem 85.jpeg" alt="Imagem 85">
+    <img src="imagem 86.jpeg" alt="Imagem 86">
+    <img src="imagem 87.jpeg" alt="Imagem 87">
+    <img src="imagem 88.jpeg" alt="Imagem 88">
+    <img src="imagem 89.jpeg" alt="Imagem 89">
+    <img src="imagem 90.jpeg" alt="Imagem 90">
+    <img src="imagem 91.jpeg" alt="Imagem 91">
+    <img src="imagem 92.jpeg" alt="Imagem 92">
+    <img src="imagem 93.jpeg" alt="Imagem 93">
+    <img src="imagem 94.jpeg" alt="Imagem 94">
+    <img src="imagem 95.jpeg" alt="Imagem 95">
+    <img src="imagem 96.jpeg" alt="Imagem 96">
+    <img src="imagem 97.jpeg" alt="Imagem 97">
+    <img src="imagem 98.jpeg" alt="Imagem 98">
+    <img src="imagem 99.jpeg" alt="Imagem 99">
+    <img src="imagem 100.jpeg" alt="Imagem 100">
+    <img src="imagem 101.jpeg" alt="Imagem 101">
+    <img src="imagem 102.jpeg" alt="Imagem 102">
+    <img src="imagem 103.jpeg" alt="Imagem 103">
+    <img src="imagem 104.jpeg" alt="Imagem 104">
+    <img src="imagem 105.jpeg" alt="Imagem 105">
+    <img src="imagem 106.jpeg" alt="Imagem 106">
+    <img src="imagem 107.jpeg" alt="Imagem 107">
+    <img src="imagem 108.jpeg" alt="Imagem 108">
+    <img src="imagem 109.jpeg" alt="Imagem 109">
+    <img src="imagem 110.jpeg" alt="Imagem 110">
+    <img src="imagem 111.jpeg" alt="Imagem 111">
+    <img src="imagem 112.jpeg" alt="Imagem 112">
+    <img src="imagem 113.jpeg" alt="Imagem 113">
+    <img src="imagem 114.jpeg" alt="Imagem 114">
+    <img src="imagem 115.jpeg" alt="Imagem 115">
+    <img src="imagem 116.jpeg" alt="Imagem 116">
+    <img src="imagem 117.jpeg" alt="Imagem 117">
+    <img src="imagem 118.jpeg" alt="Imagem 118">
+    <img src="imagem 119.jpeg" alt="Imagem 119">
+    <img src="imagem 120.jpeg" alt="Imagem 120">
+    <img src="imagem 121.jpeg" alt="Imagem 121">
+    <img src="imagem 122.jpeg" alt="Imagem 122">
+    <img src="imagem 123.jpeg" alt="Imagem 123">
+    <img src="imagem 124.jpeg" alt="Imagem 124">
+    <img src="imagem 125.jpeg" alt="Imagem 125">
+    <img src="imagem 126.jpeg" alt="Imagem 126">
+    <img src="imagem 127.jpeg" alt="Imagem 127">
+    <img src="imagem 128.jpeg" alt="Imagem 128">
+    <img src="imagem 129.jpeg" alt="Imagem 129">
+    <img src="imagem 130.jpeg" alt="Imagem 130">
+    <img src="imagem 131.jpeg" alt="Imagem 131">
+    <img src="imagem 132.jpeg" alt="Imagem 132">
+    <img src="imagem 133.jpeg" alt="Imagem 133">
+    <img src="imagem 134.jpeg" alt="Imagem 134">
+    <img src="imagem 135.jpeg" alt="Imagem 135">
+    <img src="imagem 136.jpeg" alt="Imagem 136">
+    <img src="imagem 137.jpeg" alt="Imagem 137">
+    <img src="imagem 138.jpeg" alt="Imagem 138">
+    <img src="imagem 139.jpeg" alt="Imagem 139">
+    <img src="imagem 140.jpeg" alt="Imagem 140">
+    <img src="imagem 141.jpeg" alt="Imagem 141">
+    <img src="imagem 142.jpeg" alt="Imagem 142">
+    <img src="imagem 143.jpeg" alt="Imagem 143">
+    <img src="imagem 144.jpeg" alt="Imagem 144">
+
+  </div>
+
+  <!-- Botões WhatsApp -->
+  <div class="whatsapp-buttons">
+    <a href="https://wa.me/5511998050334" target="_blank" class="whatsapp-button">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Nelson" />
+      <span>Nelson</span>
+    </a>
+    <a href="https://wa.me/5515996656664" target="_blank" class="whatsapp-button">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Liza" />
+      <span>Liza</span>
+    </a>
+  </div>
+
+  <!-- Instagram Flutuante -->
+  <a href="https://www.instagram.com/reserva_canhambora/" class="instagram-float" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+  </a>
+
+  <footer>
+    <p>&copy; 2025 RESERVA CANHAMBORA - Todos os direitos reservados</p>
+    <div class="social">
+      <!-- Adicione ícones sociais se quiser -->
+    </div>
+  </footer>
+
+</body>
+</html>
