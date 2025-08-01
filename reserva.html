@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserva</title>
+
+  <!-- Ícone -->
+  <link rel="icon" href="https://roma360tour.com/wp-content/uploads/2025/03/LOGO-500-X-500-FUNDO-TRANS-150x150.png" type="image/png" />
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Reserva Canhambora",
+    "url": "https://roma360tour.com",
+    "logo": "https://roma360tour.com/wp-content/uploads/2025/03/LOGO-500-X-500-FUNDO-TRANS-150x150.png",
+    "sameAs": ["https://www.instagram.com/reserva_canhambora/"]
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.tcdn.com.br/img/img_prod/910014/revestimento_travertino_rockface_10x30cm_1m_10567_1_e0d3657ba10e28fcef494c60554f4bf3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1, h2, p {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .caixa-marrom {
+      background-color: #f5f5f5;
+      border: 2px solid #8B4513;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      color: #333;
+    }
+
+    .caixa-azul {
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      padding: 20px 0;
+    }
+
+    .caixa-azul h1 {
+      font-size: 2.5rem;
+      color: #000;
+    }
+
+    .caixa-azul h1 span {
+      display: inline-block;
+      animation: pulo 0.6s ease-in-out infinite;
+    }
+
+    .caixa-azul h1 span:nth-child(odd) {
+      animation-delay: 0s;
+    }
+
+    .caixa-azul h1 span:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes pulo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 20px auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .container img {
+      width: 100%;
+      max-width: 600px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .buttons button {
+      font-size: 18px;
+      padding: 6px 12px;
+      background: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #ddd;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 10px;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
+      background-color: #3f2e1e;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .instagram-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      width: 50px;
+      animation: pulando 1.2s ease-in-out infinite;
+    }
+
+    .instagram-float img {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes pulando {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      left: 0;
+      background-color: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 0 5px 5px 0;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      animation: bounce 0.5s infinite;
+    }
+
+    .whatsapp1 { bottom: 70px; }
+    .whatsapp2 { bottom: 20px; }
+
+    .whatsapp-btn img {
+      width: 24px;
+      margin-right: 8px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @media (max-width: 768px) {
+      .caixa-azul h1 {
+        font-size: 2rem;
+      }
+
+      .buttons {
+        top: 5px;
+        right: 5px;
+      }
+
+      .buttons button {
+        font-size: 16px;
+        padding: 5px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <div class="caixa-marrom">
+    <h1 style="text-align: center;">Reserva Canhambora: Um Tesouro de Mata Atlântica, Biodiversidade e Conservação</h1>
+  </div>
+
+</body>
+<div class="caixa-marrom">
+    <h2 style="text-align: center;">A Reserva Canhambora é uma área de proteção ambiental reconhecida por sua rica biodiversidade, localizada no Bairro Ribeirão do município de Iporanga, região com uma das  maiores  concentrações de Mata Atlântica do mundo. 
+Com uma área de aproximadamente 600 hectares, a Reserva Canhambora conta 5 cavernas catalogadas, 20 nascentes de águas cristalinas e uma impressionante variedade de fauna e flora, muitas das quais são endêmicas ou encontram-se ameaçadas de extinção.
+
+Atualmente, a área está em processo de reconhecimento de uma RPPN (Reserva Particular De Patrimônio Natural) junto ao estado de São Paulo.
+
+Com o intuito de proteger ecossistemas frágeis e promover a educação ambiental, a Reserva Canhambora desempenha um papel fundamental na conservação da fauna e flora nativas. Espécies silvestres como mão pelada, onça parda, muriqui (mono-carvoeiro), macaco prego, veado, tatu, gato maracajá, gato mourisco, jaguatirica, irara, tamanduá, gaviões, entre tantos outros já foram registrados por  câmeras de monitoramento.
+
+Além de sua importância ecológica, a Reserva Canhambora também desenvolve projetos como levantamento de fauna do projeto Grandes Mamíferos da Mata Atlantica,  reflorestamento de palmito jussara (PSA - Jussara) e oferecendo sua sede como centro de apoio durante expedições em diferentes pesquisas científicas.
+
+A reserva promove ecoturismo sustentável e responsável, estando a aberto aos turistas que queiram conhecer suas trilhas, piscinas naturais e cachoeiras. Além disso, a reserva  também organiza passeios noturnos onde o visitante tem a oportunidade de conhecer o magnífico projeto Luzes da Floresta.
+
+Por sua combinação de conservação, pesquisa e educação, a Reserva Canhambora é um exemplo de como áreas naturais protegidas podem aliar preservação e desenvolvimento sustentável, garantindo que as futuras gerações possam herdar e apreciar a riqueza natural do nosso planeta.</h2>
+  </div>
+
+
+  <div class="container">
+    <img id="zoomImage" src="aerea1.jpg" alt="Imagem Aérea" />
+    <div class="buttons">
+      <button id="zoomOut">-</button>
+      <button id="zoomIn">+</button>
+    </div>
+  </div>
+  <!-- Botões Flutuantes -->
+  <a href="https://wa.me/5511998050334" class="whatsapp-btn whatsapp1" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Nelson" />
+    Nelson
+  </a>
+
+  <a href="https://wa.me/5515996656664" class="whatsapp-btn whatsapp2" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Liza" />
+    Liza
+  </a>
+
+  <a href="https://www.instagram.com/reserva_canhambora/" class="instagram-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+
+    <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1; /* Faz o main ocupar o espaço restante */
+    }
+
+    footer {
+      background-color: #3f2e1e;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      width: 100%; /* Garante que ocupa toda a largura */
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Conteúdo da página -->
+  </main>
+
+  <footer>
+    © 2025 Reserva Canhambora – Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
+
+  <script>
+    const img = document.getElementById('zoomImage');
+    const zoomInBtn = document.getElementById('zoomIn');
+    const zoomOutBtn = document.getElementById('zoomOut');
+
+    let scale = 1;
+    const scaleStep = 0.1;
+    const maxScale = 3;
+    const minScale = 1;
+
+    zoomInBtn.addEventListener('click', () => {
+      if (scale < maxScale) {
+        scale += scaleStep;
+        img.style.transform = `scale(${scale.toFixed(2)})`;
+      }
+    });
+
+    zoomOutBtn.addEventListener('click', () => {
+      if (scale > minScale) {
+        scale -= scaleStep;
+        img.style.transform = `scale(${scale.toFixed(2)})`;
+      }
+    });
+  </script>
+</body>
+</html>
